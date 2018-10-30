@@ -7,7 +7,7 @@ The lab has lots of pokemon images plus a core data file located at `js/data/pok
 ## User Stories
 
 * Sees a table of pokemon data
-* Can filter on at least four properties
+* Can filter on at least five properties
     * must include type (should filter both `type_1` and `type_2`)
     * include at least one number with "minimum" number filter
     * respond to `keyup` event (no form necessary)
@@ -32,9 +32,18 @@ The lab has lots of pokemon images plus a core data file located at `js/data/pok
 * `index.html` - _html document_
 * `README.md` - _info about project_
 
-## Stretch
+## Stretch Goals
 
-Add sorting! Either:
+### Dropdown of Types
+
+* Go through the data and compile an array of unique types
+    * Either looping and checking, or
+    * See the JavaScript `Set` class
+* Populate a dropdown of types and use that value for the type filter
+
+### Add sorting!
+
+Either:
 
 * Offer a radio button property choice plus direction
 * Clicking on certain column headers to sort on that property
