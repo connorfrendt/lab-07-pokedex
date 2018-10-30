@@ -24,10 +24,10 @@ The lab has lots of pokemon images plus a core data file located at `js/data/pok
     * `app.js` - _main entry point_
     * `data`
         * `pokedex.js` - _source data_
+    * `html.js` - _helper function for making templates_
     * `pokemon-api.js` - _methods for data_
     * `pokemon-table.js` - _component for table_
     * `pokemon-filter.js` - _component for filter_
-    * `html.js` - _helper function for making templates_
 * `.eslintrc` - _class eslint with `source-type: "module"`_
 * `.travis.yml` - _run linting on travis_
 * `index.html` - _html document_
