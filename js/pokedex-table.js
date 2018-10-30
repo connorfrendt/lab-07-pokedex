@@ -7,7 +7,7 @@ function makeRow(pokemon) {
         <td style="background-color: ${pokemon.color_1}">${pokemon.pokemon}</td>
         <td style="background-color: red">${pokemon.hp}</td>
         <td class="${pokemon.type_1}"></td>
-        <td>${pokemon.type_2}</td>
+        <td class="${pokemon.type_2}"></td>
     </tr>`;
 }
 
@@ -18,6 +18,6 @@ const pokedexTable = {
             tableBody.appendChild(tr);
         }
     }
-}
+};
 
-export default pokedexTable
+export default pokedexTable;
