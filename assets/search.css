@@ -8,11 +8,9 @@ h1 {
     border-radius: 10px;
 }
 h2 {
-    /* color: ; */
     background: rgba(255, 255, 255, .4);
     font-size: 2em;
     text-align: center;
-    text-decoration: underline;
 }
 .secondary {
     color: white;
