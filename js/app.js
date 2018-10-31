@@ -9,9 +9,9 @@ const pokemons = pokedexApi.getAll();
 
 pokedexTable.init(pokemons);
 
-pokedexFilter.init(function(nameFilter, typeFilter, hpMinFilter, hpMaxFilter) {
+pokedexFilter.init(function(nameFilter, typeFilter, hpMinFilter, hpMaxFilter, atkMinFilter, atkMaxFilter, defMinFilter, defMaxFilter, spatkMinFilter, spatkMaxFilter) {
     let filtered;
-    if(nameFilter || typeFilter || hpMinFilter || hpMaxFilter) {
+    if(nameFilter || typeFilter || hpMinFilter || hpMaxFilter || atkMinFilter || atkMaxFilter || defMinFilter || defMaxFilter || spatkMinFilter, spatkMaxFilter) {
         nameFilter = nameFilter.toLowerCase();
 
         filtered = pokemons.filter(function(pokemon) {
@@ -28,7 +28,25 @@ pokedexFilter.init(function(nameFilter, typeFilter, hpMinFilter, hpMaxFilter) {
             const hasMaxHP = !hpMaxFilter
                 || pokemon.hp < hpMaxFilter;
 
-            return hasName && hasType && hasMinHP && hasMaxHP;
+            const hasMinATK = !atkMinFilter
+                || pokemon.attack > atkMinFilter;
+
+            const hasMaxATK = !atkMaxFilter
+                || pokemon.attack < atkMaxFilter;
+            
+            const hasMinDEF = !defMinFilter
+                || pokemon.defense > defMinFilter;
+
+            const hasMaxDEF = !defMaxFilter
+                || pokemon.defense < defMaxFilter;
+
+            const hasMinSpATK = !spatkMinFilter
+                || pokemon.special_attack > spatkMinFilter;
+            
+            const hasMaxSpATK = !spatkMaxFilter
+                || pokemon.special_attack < spatkMaxFilter;
+
+            return hasName && hasType && hasMinHP && hasMaxHP && hasMinATK && hasMaxATK && hasMinDEF && hasMaxDEF && hasMinSpATK && hasMaxSpATK;
         });
     }
     else {
