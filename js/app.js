@@ -3,24 +3,26 @@
 
 import pokedexApi from './pokedex-api.js';
 import pokedexTable from './pokedex-table.js';
+import pokedexFilter from './pokedex-filter.js';
 
 const pokemons = pokedexApi.getAll();
 
 pokedexTable.init(pokemons);
 
-pokedexFilter.init(function(nameFilter, type_1Filter, type_2Filter, hpFilter) {
+pokedexFilter.init(function(nameFilter, typeFilter, hpFilter) {
     let filtered;
-    if(nameFilter || type_1Filter || type_2Filter || hpFilter) {
+    if(nameFilter || typeFilter || hpFilter) {
         nameFilter = nameFilter.toLowerCase();
 
         filtered = pokemons.filter(function(pokemon) {
             const hasName = !nameFilter
-                || pokemon.name.toLowerCase().includes(nameFilter);
+                || pokemon.pokemon.toLowerCase().includes(nameFilter);
             
-            const hasType_1 = !type_1Filter
-                || pokemon.type_1.includes(type_1Filter);
+            const hasType = !typeFilter
+                || pokemon.type_1.toLowerCase().includes(typeFilter)
+                || pokemon.type_2.toLowerCase().includes(typeFilter);
 
-            return hasName && hasType_1;
+            return hasName && hasType;
         });
     }
     else {

@@ -17,6 +17,13 @@ const pokedexTable = {
             const tr = makeRow(pokemons[i]);
             tableBody.appendChild(tr);
         }
+    },
+
+    update(pokemons) {
+        while(tableBody.lastElementChild) {
+            tableBody.lastElementChild.remove();
+        }
+        pokedexTable.init(pokemons);
     }
 };
 
