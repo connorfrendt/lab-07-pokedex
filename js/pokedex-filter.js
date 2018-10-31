@@ -10,6 +10,8 @@ const spatkMinInput = document.getElementById('filter-min-spatk');
 const spatkMaxInput = document.getElementById('filter-max-spatk');
 const spdefMinInput = document.getElementById('filter-min-spdef');
 const spdefMaxInput = document.getElementById('filter-max-spdef');
+const speedMinInput = document.getElementById('filter-min-speed');
+const speedMaxInput = document.getElementById('filter-max-speed');
 
 
 const pokedexFilter = {
@@ -20,7 +22,8 @@ const pokedexFilter = {
                 atkMinInput.value, atkMaxInput.value,
                 defMinInput.value, defMaxInput.value,
                 spatkMinInput.value, spatkMaxInput.value,
-                spdefMinInput.value, spdefMaxInput.value);
+                spdefMinInput.value, spdefMaxInput.value,
+                speedMinInput.value, speedMaxInput.value);
         });
         
         typeInput.addEventListener('keyup', function() {
@@ -29,7 +32,8 @@ const pokedexFilter = {
                 atkMinInput.value, atkMaxInput.value,
                 defMinInput.value, defMaxInput.value,
                 spatkMinInput.value, spatkMaxInput.value,
-                spdefMinInput.value, spdefMaxInput.value);
+                spdefMinInput.value, spdefMaxInput.value,
+                speedMinInput.value, speedMaxInput.value);
         });
 
         hpMinInput.addEventListener('keyup', function() {
@@ -38,7 +42,8 @@ const pokedexFilter = {
                 atkMinInput.value, atkMaxInput.value,
                 defMinInput.value, defMaxInput.value,
                 spatkMinInput.value, spatkMaxInput.value,
-                spdefMinInput.value, spdefMaxInput.value);
+                spdefMinInput.value, spdefMaxInput.value,
+                speedMinInput.value, speedMaxInput.value);
         });
         
         hpMaxInput.addEventListener('keyup', function() {
@@ -47,7 +52,8 @@ const pokedexFilter = {
                 atkMinInput.value, atkMaxInput.value,
                 defMinInput.value, defMaxInput.value,
                 spatkMinInput.value, spatkMaxInput.value,
-                spdefMinInput.value, spdefMaxInput.value);
+                spdefMinInput.value, spdefMaxInput.value,
+                speedMinInput.value, speedMaxInput.value);
         });
 
         atkMinInput.addEventListener('keyup', function() {
@@ -56,7 +62,8 @@ const pokedexFilter = {
                 atkMinInput.value, atkMaxInput.value,
                 defMinInput.value, defMaxInput.value,
                 spatkMinInput.value, spatkMaxInput.value,
-                spdefMinInput.value, spdefMaxInput.value);
+                spdefMinInput.value, spdefMaxInput.value,
+                speedMinInput.value, speedMaxInput.value);
         });
         
         atkMaxInput.addEventListener('keyup', function() {
@@ -65,7 +72,8 @@ const pokedexFilter = {
                 atkMinInput.value, atkMaxInput.value,
                 defMinInput.value, defMaxInput.value,
                 spatkMinInput.value, spatkMaxInput.value,
-                spdefMinInput.value, spdefMaxInput.value);
+                spdefMinInput.value, spdefMaxInput.value,
+                speedMinInput.value, speedMaxInput.value);
         });
 
         defMinInput.addEventListener('keyup', function() {
@@ -74,7 +82,8 @@ const pokedexFilter = {
                 atkMinInput.value, atkMaxInput.value,
                 defMinInput.value, defMaxInput.value,
                 spatkMinInput.value, spatkMaxInput.value,
-                spdefMinInput.value, spdefMaxInput.value);
+                spdefMinInput.value, spdefMaxInput.value,
+                speedMinInput.value, speedMaxInput.value);
         });
         
         defMaxInput.addEventListener('keyup', function() {
@@ -83,7 +92,8 @@ const pokedexFilter = {
                 atkMinInput.value, atkMaxInput.value,
                 defMinInput.value, defMaxInput.value,
                 spatkMinInput.value, spatkMaxInput.value,
-                spdefMinInput.value, spdefMaxInput.value);
+                spdefMinInput.value, spdefMaxInput.value,
+                speedMinInput.value, speedMaxInput.value);
         });
 
         spatkMinInput.addEventListener('keyup', function() {
@@ -92,7 +102,8 @@ const pokedexFilter = {
                 atkMinInput.value, atkMaxInput.value,
                 defMinInput.value, defMaxInput.value,
                 spatkMinInput.value, spatkMaxInput.value,
-                spdefMinInput.value, spdefMaxInput.value);
+                spdefMinInput.value, spdefMaxInput.value,
+                speedMinInput.value, speedMaxInput.value);
         });
         
         spatkMaxInput.addEventListener('keyup', function() {
@@ -101,7 +112,8 @@ const pokedexFilter = {
                 atkMinInput.value, atkMaxInput.value,
                 defMinInput.value, defMaxInput.value,
                 spatkMinInput.value, spatkMaxInput.value,
-                spdefMinInput.value, spdefMaxInput.value);
+                spdefMinInput.value, spdefMaxInput.value,
+                speedMinInput.value, speedMaxInput.value);
         });
 
         spdefMinInput.addEventListener('keyup', function() {
@@ -110,7 +122,8 @@ const pokedexFilter = {
                 atkMinInput.value, atkMaxInput.value,
                 defMinInput.value, defMaxInput.value,
                 spatkMinInput.value, spatkMaxInput.value,
-                spdefMinInput.value, spdefMaxInput.value);
+                spdefMinInput.value, spdefMaxInput.value,
+                speedMinInput.value, speedMaxInput.value);
         });
         
         spdefMaxInput.addEventListener('keyup', function() {
@@ -119,7 +132,28 @@ const pokedexFilter = {
                 atkMinInput.value, atkMaxInput.value,
                 defMinInput.value, defMaxInput.value,
                 spatkMinInput.value, spatkMaxInput.value,
-                spdefMinInput.value, spdefMaxInput.value);
+                spdefMinInput.value, spdefMaxInput.value,
+                speedMinInput.value, speedMaxInput.value);
+        });
+
+        speedMinInput.addEventListener('keyup', function() {
+            onFilter(nameInput.value, typeInput.value,
+                hpMinInput.value, hpMaxInput.value,
+                atkMinInput.value, atkMaxInput.value,
+                defMinInput.value, defMaxInput.value,
+                spatkMinInput.value, spatkMaxInput.value,
+                spdefMinInput.value, spdefMaxInput.value,
+                speedMinInput.value, speedMaxInput.value);
+        });
+        
+        speedMaxInput.addEventListener('keyup', function() {
+            onFilter(nameInput.value, typeInput.value,
+                hpMinInput.value, hpMaxInput.value,
+                atkMinInput.value, atkMaxInput.value,
+                defMinInput.value, defMaxInput.value,
+                spatkMinInput.value, spatkMaxInput.value,
+                spdefMinInput.value, spdefMaxInput.value,
+                speedMinInput.value, speedMaxInput.value);
         });
     }
 };
