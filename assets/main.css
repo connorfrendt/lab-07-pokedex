@@ -66,3 +66,14 @@
     background: url('https://www.serebii.net/pokedex-rs/type/water.gif');
     background-repeat: no-repeat;
 }
+body {
+    background-image: url("https://i.ebayimg.com/images/g/~doAAOSw-itXu4Vu/s-l300.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#table-border {
+    border: 10px solid maroon;
+    border-radius: 10px;
+    background-color: rgba(0, 2, 97, .4);
+}
