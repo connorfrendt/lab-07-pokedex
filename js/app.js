@@ -9,9 +9,9 @@ const pokemons = pokedexApi.getAll();
 
 pokedexTable.init(pokemons);
 
-pokedexFilter.init(function(nameFilter, typeFilter, hpFilter) {
+pokedexFilter.init(function(nameFilter, typeFilter, hpMinFilter, ) {
     let filtered;
-    if(nameFilter || typeFilter || hpFilter) {
+    if(nameFilter || typeFilter || hpMinFilter) {
         nameFilter = nameFilter.toLowerCase();
 
         filtered = pokemons.filter(function(pokemon) {
@@ -21,8 +21,11 @@ pokedexFilter.init(function(nameFilter, typeFilter, hpFilter) {
             const hasType = !typeFilter
                 || pokemon.type_1.toLowerCase().includes(typeFilter)
                 || pokemon.type_2.toLowerCase().includes(typeFilter);
+            
+            const hasHP = !hpMinFilter
+                || pokemon.hp > hpMinFilter;
 
-            return hasName && hasType;
+            return hasName && hasType && hasHP;
         });
     }
     else {
