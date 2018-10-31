@@ -9,9 +9,9 @@ const pokemons = pokedexApi.getAll();
 
 pokedexTable.init(pokemons);
 
-pokedexFilter.init(function(nameFilter, typeFilter, hpMinFilter, ) {
+pokedexFilter.init(function(nameFilter, typeFilter, hpMinFilter, hpMaxFilter) {
     let filtered;
-    if(nameFilter || typeFilter || hpMinFilter) {
+    if(nameFilter || typeFilter || hpMinFilter || hpMaxFilter) {
         nameFilter = nameFilter.toLowerCase();
 
         filtered = pokemons.filter(function(pokemon) {
@@ -22,10 +22,13 @@ pokedexFilter.init(function(nameFilter, typeFilter, hpMinFilter, ) {
                 || pokemon.type_1.toLowerCase().includes(typeFilter)
                 || pokemon.type_2.toLowerCase().includes(typeFilter);
             
-            const hasHP = !hpMinFilter
+            const hasMinHP = !hpMinFilter
                 || pokemon.hp > hpMinFilter;
 
-            return hasName && hasType && hasHP;
+            const hasMaxHP = !hpMaxFilter
+                || pokemon.hp < hpMaxFilter;
+
+            return hasName && hasType && hasMinHP && hasMaxHP;
         });
     }
     else {
