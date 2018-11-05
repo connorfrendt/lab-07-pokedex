@@ -16,7 +16,7 @@ const speedMaxInput = document.getElementById('filter-max-speed');
 
 const pokedexFilter = {
     init(onFilter) {
-        nameInput.addEventListener('keyup', function() {
+        nameInput.addEventListener('keyup', () => {
             onFilter(nameInput.value, typeInput.value,
                 hpMinInput.value, hpMaxInput.value,
                 atkMinInput.value, atkMaxInput.value,
@@ -26,7 +26,7 @@ const pokedexFilter = {
                 speedMinInput.value, speedMaxInput.value);
         });
         
-        typeInput.addEventListener('keyup', function() {
+        typeInput.addEventListener('keyup', () => {
             onFilter(nameInput.value, typeInput.value,
                 hpMinInput.value, hpMaxInput.value,
                 atkMinInput.value, atkMaxInput.value,
@@ -36,7 +36,7 @@ const pokedexFilter = {
                 speedMinInput.value, speedMaxInput.value);
         });
 
-        hpMinInput.addEventListener('keyup', function() {
+        hpMinInput.addEventListener('keyup', () => {
             onFilter(nameInput.value, typeInput.value,
                 hpMinInput.value, hpMaxInput.value,
                 atkMinInput.value, atkMaxInput.value,
@@ -46,7 +46,7 @@ const pokedexFilter = {
                 speedMinInput.value, speedMaxInput.value);
         });
         
-        hpMaxInput.addEventListener('keyup', function() {
+        hpMaxInput.addEventListener('keyup', () => {
             onFilter(nameInput.value, typeInput.value,
                 hpMinInput.value, hpMaxInput.value,
                 atkMinInput.value, atkMaxInput.value,
@@ -56,7 +56,7 @@ const pokedexFilter = {
                 speedMinInput.value, speedMaxInput.value);
         });
 
-        atkMinInput.addEventListener('keyup', function() {
+        atkMinInput.addEventListener('keyup', () => {
             onFilter(nameInput.value, typeInput.value,
                 hpMinInput.value, hpMaxInput.value,
                 atkMinInput.value, atkMaxInput.value,
@@ -66,7 +66,7 @@ const pokedexFilter = {
                 speedMinInput.value, speedMaxInput.value);
         });
         
-        atkMaxInput.addEventListener('keyup', function() {
+        atkMaxInput.addEventListener('keyup', () => {
             onFilter(nameInput.value, typeInput.value,
                 hpMinInput.value, hpMaxInput.value,
                 atkMinInput.value, atkMaxInput.value,
@@ -76,7 +76,7 @@ const pokedexFilter = {
                 speedMinInput.value, speedMaxInput.value);
         });
 
-        defMinInput.addEventListener('keyup', function() {
+        defMinInput.addEventListener('keyup', () => {
             onFilter(nameInput.value, typeInput.value,
                 hpMinInput.value, hpMaxInput.value,
                 atkMinInput.value, atkMaxInput.value,
@@ -86,7 +86,7 @@ const pokedexFilter = {
                 speedMinInput.value, speedMaxInput.value);
         });
         
-        defMaxInput.addEventListener('keyup', function() {
+        defMaxInput.addEventListener('keyup', () => {
             onFilter(nameInput.value, typeInput.value,
                 hpMinInput.value, hpMaxInput.value,
                 atkMinInput.value, atkMaxInput.value,
@@ -96,7 +96,7 @@ const pokedexFilter = {
                 speedMinInput.value, speedMaxInput.value);
         });
 
-        spatkMinInput.addEventListener('keyup', function() {
+        spatkMinInput.addEventListener('keyup', () => {
             onFilter(nameInput.value, typeInput.value,
                 hpMinInput.value, hpMaxInput.value,
                 atkMinInput.value, atkMaxInput.value,
@@ -106,7 +106,7 @@ const pokedexFilter = {
                 speedMinInput.value, speedMaxInput.value);
         });
         
-        spatkMaxInput.addEventListener('keyup', function() {
+        spatkMaxInput.addEventListener('keyup', () => {
             onFilter(nameInput.value, typeInput.value,
                 hpMinInput.value, hpMaxInput.value,
                 atkMinInput.value, atkMaxInput.value,
@@ -116,7 +116,7 @@ const pokedexFilter = {
                 speedMinInput.value, speedMaxInput.value);
         });
 
-        spdefMinInput.addEventListener('keyup', function() {
+        spdefMinInput.addEventListener('keyup', () => {
             onFilter(nameInput.value, typeInput.value,
                 hpMinInput.value, hpMaxInput.value,
                 atkMinInput.value, atkMaxInput.value,
@@ -126,7 +126,7 @@ const pokedexFilter = {
                 speedMinInput.value, speedMaxInput.value);
         });
         
-        spdefMaxInput.addEventListener('keyup', function() {
+        spdefMaxInput.addEventListener('keyup', () => {
             onFilter(nameInput.value, typeInput.value,
                 hpMinInput.value, hpMaxInput.value,
                 atkMinInput.value, atkMaxInput.value,
@@ -136,7 +136,7 @@ const pokedexFilter = {
                 speedMinInput.value, speedMaxInput.value);
         });
 
-        speedMinInput.addEventListener('keyup', function() {
+        speedMinInput.addEventListener('keyup', () => {
             onFilter(nameInput.value, typeInput.value,
                 hpMinInput.value, hpMaxInput.value,
                 atkMinInput.value, atkMaxInput.value,
@@ -146,7 +146,7 @@ const pokedexFilter = {
                 speedMinInput.value, speedMaxInput.value);
         });
         
-        speedMaxInput.addEventListener('keyup', function() {
+        speedMaxInput.addEventListener('keyup', () => {
             onFilter(nameInput.value, typeInput.value,
                 hpMinInput.value, hpMaxInput.value,
                 atkMinInput.value, atkMaxInput.value,

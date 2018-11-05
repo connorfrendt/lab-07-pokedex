@@ -9,12 +9,12 @@ const pokemons = pokedexApi.getAll();
 
 pokedexTable.init(pokemons);
 
-pokedexFilter.init(function(nameFilter, typeFilter, hpMinFilter, hpMaxFilter, atkMinFilter, atkMaxFilter, defMinFilter, defMaxFilter, spatkMinFilter, spatkMaxFilter, spdefMinFilter, spdefMaxFilter, speedMinFilter, speedMaxFilter) {
+pokedexFilter.init((nameFilter, typeFilter, hpMinFilter, hpMaxFilter, atkMinFilter, atkMaxFilter, defMinFilter, defMaxFilter, spatkMinFilter, spatkMaxFilter, spdefMinFilter, spdefMaxFilter, speedMinFilter, speedMaxFilter) => {
     let filtered;
     if(nameFilter || typeFilter || hpMinFilter || hpMaxFilter || atkMinFilter || atkMaxFilter || defMinFilter || defMaxFilter || spatkMinFilter || spatkMaxFilter || spdefMinFilter || spdefMaxFilter || speedMinFilter || speedMaxFilter) {
         nameFilter = nameFilter.toLowerCase();
 
-        filtered = pokemons.filter(function(pokemon) {
+        filtered = pokemons.filter(pokemon => {
             const hasName = !nameFilter
                 || pokemon.pokemon.toLowerCase().includes(nameFilter);
             
